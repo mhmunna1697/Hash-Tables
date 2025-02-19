@@ -38,9 +38,8 @@ Each hash table handles **1000 flows** and **1000 table entries**, using differe
   cd Hash-Tables
 
 ## **Compilation & Execution**
-Compile and run the individual hash table implementations. for example:
+Compile and run the individual hash table implementations. for example, to run Multi-Hash Table:
 
-### **Multi-Hash Table**
 ```bash
 javac Multi_Hashing.java
 java Multi_Hashing
@@ -50,8 +49,8 @@ java Multi_Hashing
 Each execution generates an output file:
 
 - `multi-hashing-output.txt`
-- `cuckoo_hash_output.txt`
-- `d-left_hash_table_output.txt`
+- `cuckoo-hash-output.txt`
+- `d-left-hash-output.txt`
 
 
 Each file contains:
@@ -62,16 +61,18 @@ Each file contains:
 ---
 
 ## **Example Output**
-Example contents of an output file (`cuckoo_hash_table_output.txt`):
-
-- **940** → Number of flows successfully inserted.
-- **Remaining lines** → Flow IDs in the table (or `0` for empty slots).
+Example contents of an output file (`cuckoo_hash_output.txt`):
+```txt
 940
 12345
 67890
 0
 45678
 ...
+```
+
+- **940** → Number of flows successfully inserted.
+- **Remaining lines** → Flow IDs in the table (or `0` for empty slots).
 
 ---
 
