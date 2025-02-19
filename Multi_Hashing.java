@@ -11,7 +11,7 @@ public class Multi_Hashing {
 
     public static void main(String[] args) {
         int[] hashTable = new int[w]; // table entries initialized to 0
-        int counter = 0;
+        int insertedFlows = 0;    // count the number of flows in the hash table
 
         for (int i = 0; i < flows; i++) {
             int flowID = rand.nextInt(Integer.MAX_VALUE);   // generate flow IDs randomly
@@ -20,7 +20,7 @@ public class Multi_Hashing {
                 int index = Math.abs((flowID ^ (j * 31)) % w);
                 if (hashTable[index] == 0) {    // empty slot found
                     hashTable[index] = flowID;
-                    counter++;
+                    insertedFlows++;
                     break;
                 }
             }
@@ -28,8 +28,8 @@ public class Multi_Hashing {
         }
 
         // write output to file
-        try (FileWriter writer = new FileWriter("hash_table_output.txt")) {
-            writer.write("the number of flows in the hash table: " +counter + "\n");
+        try (FileWriter writer = new FileWriter("multi-hashing-output.txt")) {
+            writer.write("the number of flows in the Multi hash table: " +insertedFlows + "\n");
             for (int entry : hashTable) {
                 writer.write(entry + "\n");
             }
