@@ -63,7 +63,7 @@ Each file contains:
 ## **Example Output**
 Example contents of an output file (`cuckoo_hash_output.txt`):
 ```txt
-940
+the number of flows in the Cuckoo hash table: 940
 12345
 67890
 0
@@ -71,7 +71,7 @@ Example contents of an output file (`cuckoo_hash_output.txt`):
 ...
 ```
 
-- **940** → Number of flows successfully inserted.
+- **First line** → Number of flows successfully inserted.
 - **Remaining lines** → Flow IDs in the table (or `0` for empty slots).
 
 ---
