@@ -4,8 +4,8 @@
 This repository contains Java implementations of three different hash table techniques used in network packet processing and data stream management:
 
 - **Multi-Hash Table**: Uses multiple hash functions to insert flows into a single table.
-- **D-Left Hash Table**: Divides the hash table into multiple segments and places each flow into the least occupied segment.
 - **Cuckoo Hash Table**: Uses multiple hash functions and allows flow relocation to resolve collisions.
+- **D-Left Hash Table**: Divides the hash table into multiple segments and places each flow into the least occupied segment.
 
 Each hash table handles **1000 flows** and **1000 table entries**, using different hashing strategies to optimize placement and minimize collisions.
 
@@ -44,6 +44,7 @@ Compile and run the individual hash table implementations. for example:
 ```bash
 javac Multi_Hashing.java
 java Multi_Hashing
+```
 
 ## **Output Files**
 Each execution generates an output file:
